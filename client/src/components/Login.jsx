@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
-export default function Signup() {
+export default function Login() {
     const [formData, setFormData] = useState({
         username: '',
-        email: '',
         password: '',
     });
 
@@ -18,13 +17,13 @@ export default function Signup() {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        console.log('Form data submitted:', formData);
-        alert('Signup successful!');
+        console.log('Login data submitted:', formData);
+        alert('Login attempt submitted. Implement authentication here.');
     };
 
     return (
         <div>
-            <h2>Signup</h2>
+            <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="username">Username:</label>
@@ -33,17 +32,6 @@ export default function Signup() {
                         id="username"
                         name="username"
                         value={formData.username}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="email">Email:</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
                         onChange={handleChange}
                         required
                     />
@@ -59,7 +47,7 @@ export default function Signup() {
                         required
                     />
                 </div>
-                <button type="submit">Sign Up</button>
+                <button type="submit">Log In</button>
             </form>
         </div>
     );
