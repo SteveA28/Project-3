@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function home() {
   return (
-    <div>home</div>
+    <>
+    <section className=' bg-red-500'></section>
+    </>
   )
 }
