@@ -23,7 +23,7 @@ export default function Cart() {
     };
 
     return (
-        <div>
+        <div >
             <h2>Shopping Cart</h2>
             {cart.length > 0 ? (
                 <div>
