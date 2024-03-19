@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../assets/Signup.css';
 
 export default function Signup() {
     const [formData, setFormData] = useState({
