@@ -3,11 +3,9 @@ const Navbar = () => {
   const [profileOpen, setProfileOpen] = useState(false);
   const [asideOpen, setAsideOpen] = useState(true);
   const navItems = [
-    { icon: 'bx-home', label: 'Dashboard', href: 'add path here' },
-    { icon: 'bx-cart', label: 'Cart', href: 'add path here' },
-    { icon: 'bx-shopping-bag', label: 'Shopping', href: 'add path here' },
-    { icon: 'bx-heart', label: 'My Favourite', href: 'add path here' },
-    { icon: 'bx-user', label: 'Profile', href: 'add path here' },
+    { icon: 'bx-home', label: 'HOME', href: 'add path here' },
+    { icon: 'bx-sign-up', label: 'SIGN UP', href: 'add path here' },
+
   ];
   return (
     <main className="min-h-screen w-full bg-gray-100 text-gray-700">
@@ -20,7 +18,7 @@ const Navbar = () => {
           >
             <i className="bx bx-menu"></i>
           </button>
-          <div>Logo</div>
+          <div>TripSet</div>
         </div>
         <div>
           <button
