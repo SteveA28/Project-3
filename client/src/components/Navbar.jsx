@@ -3,6 +3,7 @@ const Navbar = () => {
   const [asideOpen, setAsideOpen] = useState(false);
   const navItems = [
     { icon: 'bx-home', label: 'HOME', href: 'add path here' },
+    { icon: 'bx-log-in', label: 'LOGIN', href: 'add path here' }, // Added "Login" button
     { icon: 'bx-user-plus', label: 'SIGN UP', href: 'add path here' },
   ];
   return (
@@ -28,7 +29,6 @@ const Navbar = () => {
         </div>
       </header>
       <div className="flex">
-        {/* Render aside only when asideOpen is true */}
         {asideOpen && (
           <aside className="w-72 border-r-2 border-gray-200 bg-white p-2">
             {/* Side menu items if needed */}
