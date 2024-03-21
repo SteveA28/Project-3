@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [asideOpen, setAsideOpen] = useState(false);
   const navItems = [
-    { icon: 'bx-home', label: 'HOME', href: 'add path here' },
-    { icon: 'bx-log-in', label: 'LOGIN', href: 'add path here' }, // Added "Login" button
-    { icon: 'bx-user-plus', label: 'SIGN UP', href: 'add path here' },
+    { icon: 'bx-home', label: 'HOME', href: '/' },
+    { icon: 'bx-log-in', label: 'LOGIN', href: '/login' }, // Added "Login" button
+    { icon: 'bx-user-plus', label: 'SIGN UP', href: '/signup' },
   ];
   return (
     <main className=" w-full bg-gray-100 text-gray-700">
@@ -21,10 +22,10 @@ const Navbar = () => {
         </div>
         <div className="flex items-center space-x-4">
           {navItems.map((item, index) => (
-            <a key={index} href={item.href} className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 hover:text-blue-600">
+            <Link key={index} to={item.href} className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 hover:text-blue-600">
               <i className={`bx ${item.icon} text-xl align-middle`}></i>
               <span className="ml-1 align-middle">{item.label}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </header>
