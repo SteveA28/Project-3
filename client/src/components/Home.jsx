@@ -15,19 +15,44 @@ export default function home() {
     <>
       <section className="pb-[40px]">
         <div className="relative">
-          <img src={bahamas} className="h-[400px] w-full shadow-md" alt="" />
+          <img src={bahamas} className="h-[280px] w-full shadow-md" alt="" />
           <div className="intro absolute bottom-10 pl-[10px]">
-            <h1 className=" text-gray-200 text-[4.5rem] font-bold  font-montserrat">
-              It's Time For A Get Away
+            <h1 className=" text-blue-100 text-[4.5rem] font-bold  font-montserrat">
+              It's Time For A Get Away With TripSet!
             </h1>
           </div>
         </div>
 
         <div className="px-[20px]">
           <p className="font-montserrat text-[1.2rem] mt-[20px] font-[500]">
-            Taking a vacation with family, friends or your own is a great way to
-            recharge. Enjoy kicking your feet up and enjoying all the luxuries
-            of a well-deserved getaway that your future self will thank you for!
+          
+Discover the world with TripSet, your portal to four breathtaking destinations. Our expertly curated vacation packages promise unforgettable adventures, relaxation, and cultural immersion.
+
+<div>
+      <div style={{ textAlign: 'center' }}>
+        <h2>Bahamas</h2>
+        <p>Experience paradise with crystal-clear waters, vibrant coral reefs, and sun-soaked beaches in the Bahamas. A tropical escape awaits.</p>
+      </div>
+      
+      <div style={{ textAlign: 'center' }}>
+        <h2>Caribbean</h2>
+        <p>Dive into the vibrant life of the Caribbean. Rich cultures, lively music, and stunning landscapes make for the ultimate island-hopping journey.</p>
+      </div>
+      
+      <div style={{ textAlign: 'center' }}>
+        <h2>Hawaii</h2>
+        <p>Embrace the spirit of Aloha. Hawaii's volcanoes, waterfalls, and cultural sites invite you on an enchanting journey through paradise.</p>
+      </div>
+      
+      <div style={{ textAlign: 'center' }}>
+        <h2>Alaska</h2>
+        <p>Venture into the wilds of Alaska. Majestic glaciers, rugged landscapes, and abundant wildlife offer an adventure like no other.</p>
+      </div>
+      
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <p>With TripSet, unforgettable memories are just a click away. Embark on your journey with us today!</p>
+      </div>
+    </div>
           </p>
 
           <div className="category-details">
