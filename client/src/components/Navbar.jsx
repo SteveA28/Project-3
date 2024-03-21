@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 const Navbar = () => {
   const [asideOpen, setAsideOpen] = useState(false);
   const navItems = [
-    { icon: 'bx-home', label: 'HOME', href: 'add path here' },
-    { icon: 'bx-log-in', label: 'LOGIN', href: 'add path here' }, // Added "Login" button
-    { icon: 'bx-user-plus', label: 'SIGN UP', href: 'add path here' },
+    { icon: 'bx-home', label: 'HOME', href: '#home' },
+    { icon: 'bx-log-in', label: 'LOGIN', href: '#login' },
+    { icon: 'bx-user-plus', label: 'SIGN UP', href: '#signup' },
   ];
   return (
     <main className=" w-full bg-gray-100 text-gray-700">
@@ -17,6 +17,8 @@ const Navbar = () => {
           >
             <i className="bx bx-menu"></i>
           </button>
+          {/* Logo added next to TripSet */}
+          <img src="/logo.png" alt="Logo" className="h-8 w-8" />
           <div>TripSet</div>
         </div>
         <div className="flex items-center space-x-4">
