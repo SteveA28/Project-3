@@ -7,7 +7,7 @@ const Navbar = () => {
     { icon: 'bx-user-plus', label: 'SIGN UP', href: 'add path here' },
   ];
   return (
-    <main className="min-h-screen w-full bg-gray-100 text-gray-700">
+    <main className=" w-full bg-gray-100 text-gray-700">
       <header className="flex w-full items-center justify-between border-b-2 border-gray-200 bg-white p-2">
         <div className="flex items-center space-x-2">
           <button
@@ -34,7 +34,7 @@ const Navbar = () => {
             {/* Side menu items if needed */}
           </aside>
         )}
-        <div className="flex-grow p-4">
+        <div className="flex-grow">
           {/* Main content goes here */}
         </div>
       </div>

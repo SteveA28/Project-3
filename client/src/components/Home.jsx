@@ -9,10 +9,11 @@ import groupPlatinum from "../assets/img/group-platinum.jpeg";
 import individualBasic from "../assets/img/individual-basic.jpeg";
 import individualPremium from "../assets/img/individual-premium.jpeg";
 import individualPlatinum from "../assets/img/individual-platinum.jpeg";
-
+import Navbar from "./Navbar";
 export default function home() {
   return (
     <>
+    <Navbar/>
       <section className="pb-[40px]">
         <div className="relative">
           <img src={bahamas} className="h-[280px] w-full shadow-md" alt="" />
