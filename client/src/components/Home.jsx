@@ -55,95 +55,159 @@ Discover the world with TripSet, your portal to four breathtaking destinations. 
     </div>
           </p>
 
-          <div className="category-details">
-            <h2 className="font-bold text-[1.2rem] mt-[50px]">
-              Choose A Category:
-            </h2>
+          <div className="category-details px-[20px] ">
+          <h2 className="font-bold  text-left text-[1.2rem] mt-[50px]">
+            Choose A Category:
+          </h2>
 
-            <div className="categories mt-[20px] flex gap-4">
-              <div className="category bg-blue-500 cursor-pointer font-[500] text-[1.2rem] font-montserrat p-3 min-w-[140px] text-center rounded-md">
-                Individual
-              </div>
-              <div className="category bg-blue-500 cursor-pointer font-[500] text-[1.2rem] font-montserrat p-3 min-w-[140px] text-center rounded-md">
-                Family
-              </div>
-              <div className="category bg-blue-500 cursor-pointer font-[500] text-[1.2rem] font-montserrat p-3 min-w-[140px] text-center rounded-md">
-                Group
-              </div>
+          <div className="categories mt-[20px] flex gap-4">
+            <div className="category bg-blue-500 cursor-pointer font-[500] text-[1.2rem] font-montserrat p-3 min-w-[140px] text-center rounded-md">
+              Individual
             </div>
-
-            <div className="package-details ">
-              <h2 className="font-bold text-[1.2rem] mt-[50px]">
-                Our Packages:
-              </h2>
-
-              <div className="packages mt-[20px]  justify-center flex flex-wrap gap-3">
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img src={familyBasic} className="h-[170px] w-full" alt="" />
-                  <h3 className="font-bold mt-[5px] text-center text-violet-700">
-                    Family Basic Package
-                  </h3>
-                  <button class="mt-[120px] bg-gray-500 py-[10px] rounded-md text-white">
-                    View Details
-                  </button>
-                </div>
-
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img
-                    src={familyPremium}
-                    className="h-[170px] w-full"
-                    alt=""
-                  />
-                  <h3 className="font-bold mt-[5px] text-center text-violet-700">
-                    Family Premium Package
-                  </h3>
-
-                  <button class="mt-[120px] bg-gray-500 py-[10px] rounded-md text-white">
-                    View Details
-                  </button>
-                </div>
-
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img
-                    src={familyPlatinum}
-                    className="h-[170px] w-full"
-                    alt=""
-                  />
-                  <h3 className="font-bold mt-[5px] text-center text-violet-700">
-                    Family Platinum Package
-                  </h3>
-                  <button class="mt-[120px] bg-gray-500 py-[10px] rounded-md text-white">
-                    View Details
-                  </button>
-                </div>
-
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img src="" alt="" />
-                </div>
-
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img src="" alt="" />
-                </div>
-
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img src="" alt="" />
-                </div>
-
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img src="" alt="" />
-                </div>
-
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img src="" alt="" />
-                </div>
-
-                <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
-                  <img src="" alt="" />
-                </div>
-              </div>
+            <div className="category bg-blue-500 cursor-pointer font-[500] text-[1.2rem] font-montserrat p-3 min-w-[140px] text-center rounded-md">
+              Family
+            </div>
+            <div className="category bg-blue-500 cursor-pointer font-[500] text-[1.2rem] font-montserrat p-3 min-w-[140px] text-center rounded-md">
+              Group
             </div>
           </div>
         </div>
+
+        <div className="package-details px-[20px]">
+          <h2 className="font-bold  text-left text-[1.2rem] mt-[50px]">
+            Our Packages:
+          </h2>
+
+          <div className="packages mt-[20px]  justify-center flex flex-wrap   gap-3">
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img src={familyBasic} className="h-[170px] w-full" alt="" />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Family Basic Package
+              </h3>
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $650
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img src={familyPremium} className="h-[170px] w-full" alt="" />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Family Premium Package
+              </h3>
+
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $850
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img src={familyPlatinum} className="h-[170px] w-full" alt="" />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Family Platinum Package
+              </h3>
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $1100
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+
+            {/* --------------------  */}
+
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img src={groupBasic} className="h-[170px] w-full" alt="" />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Group Basic Package
+              </h3>
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $750
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img src={groupPremium} className="h-[170px] w-full" alt="" />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Group Premium Package
+              </h3>
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $900
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img src={groupPlatinum} className="h-[170px] w-full" alt="" />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Group Platinum Package
+              </h3>
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $1200
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+            {/* ------------------- */}
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img src={individualBasic} className="h-[170px] w-full" alt="" />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Individual Basic Package
+              </h3>
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $500
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img
+                src={individualPremium}
+                className="h-[170px] w-full"
+                alt=""
+              />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Individual Premium Package
+              </h3>
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $750
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+
+            <div className="package px-[8px] py-[5px] flex flex-col rounded-md border-black border-solid border-[1.5px] w-[300px] h-[400px]">
+              <img
+                src={individualPlatinum}
+                className="h-[170px] w-full"
+                alt=""
+              />
+              <h3 className="font-bold mt-[5px] text-center text-violet-700">
+                Individual Platinum Package
+              </h3>
+              <p className="package-price text-center text-[1.6rem] my-[50px] ">
+                $950
+              </p>
+              <button class=" bg-gray-500 py-[10px] rounded-md text-white">
+                View Details
+              </button>
+            </div>
+          </div>
+        </div>        </div>
       </section>
     </>
   );
