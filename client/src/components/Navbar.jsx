@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   const [asideOpen, setAsideOpen] = useState(false);
   const navItems = [
@@ -18,6 +19,8 @@ const Navbar = () => {
           >
             <i className="bx bx-menu"></i>
           </button>
+          {/* Logo added next to TripSet */}
+          <img src="/logo.png" alt="Logo" className="h-8 w-8" />
           <div>TripSet</div>
         </div>
         <div className="flex items-center space-x-4">
