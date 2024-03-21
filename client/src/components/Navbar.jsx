@@ -20,7 +20,7 @@ const Navbar = () => {
             <i className="bx bx-menu"></i>
           </button>
           {/* Logo added next to TripSet */}
-          <img src="/logo.png" alt="Logo" className="h-8 w-8" />
+          <img src="https://pngimg.com/d/palm_tree_PNG93280.png" alt="Logo" className="h-8 w-8" />
           <div>TripSet</div>
         </div>
         <div className="flex items-center space-x-4">
