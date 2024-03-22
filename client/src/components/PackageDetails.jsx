@@ -12,7 +12,7 @@ export default function PackageDetails() {
         <div>
           <h2 className="text-[3rem] mt-[20px] mb-[10px]">Package Details</h2>
           <ul className="">
-            <li className="text-[1.2rem]">3-Day 4-star hotel accomodation</li>
+          <li className="text-[1.2rem]">3-Day 4-star hotel accomodation</li>
             <li className="text-[1.2rem]">Commercial Flight fees covered</li>
             <p className='font-bold text-[20px]'>price : $ $650</p>
           </ul>
