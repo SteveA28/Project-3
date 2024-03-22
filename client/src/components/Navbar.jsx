@@ -6,7 +6,7 @@ const Navbar = () => {
   const navItems = [
     { icon: 'bx-home', label: 'HOME', href: '/' }, // Added "HOME" button
     { icon: 'bx-log-in', label: 'LOGIN', href: '/login' }, // Added "LOGIN" button
-    { icon: 'bx-user-plus', label: 'SIGN UP', href: '/signup' }, // Added "SIGN UP"
+    { icon: 'bx-user-plus', label: 'SIGN UP', href: '/signup' }, // Added "SIGN UP" button
   ];
   return (
     <main className=" w-full bg-gray-100 text-gray-700">
@@ -35,11 +35,11 @@ const Navbar = () => {
       <div className="flex">
         {asideOpen && (
           <aside className="w-72 border-r-2 border-gray-200 bg-white p-2">
-            {/* Side menu items if needed */}
+            {}
           </aside>
         )}
         <div className="flex-grow">
-          {/* Main content goes here */}
+          {}
         </div>
       </div>
     </main>
