@@ -2,6 +2,7 @@ import express from "express";
 import { graphqlHTTP } from "express-graphql";
 import MONGOOSE_CONNECTION from "./db/connection.js";
 import Package from "./models/PackageModel.js";
+import User from "./models/UserModel.js";
 
 import {
   GraphQLID,
@@ -31,7 +32,14 @@ const PackageType = new GraphQLObjectType({
     // },
   }),
 });
-// const UserType = new GraphQLObjectType({});
+const UserType = new GraphQLObjectType({
+  name: "Users",
+  fields: () => ({
+    firstName: { type: new GraphQLNonNull(GraphQLString) },
+    lastName: { type: new GraphQLNonNull(GraphQLString) },
+    password: { type: new GraphQLNonNull(GraphQLString) },
+  }),
+});
 // const CategoryType = new GraphQLObjectType({});
 
 const QueryType = new GraphQLObjectType({
@@ -44,6 +52,14 @@ const QueryType = new GraphQLObjectType({
       resolve: async () => {
         const packages = await Package.find({});
         return packages;
+      },
+    },
+    users: {
+      type: new GraphQLList(UserType),
+      description: "User than can purchase packages",
+      resolve: async () => {
+        const users = await User.find({});
+        return users;
       },
     },
   }),
