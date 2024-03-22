@@ -21,11 +21,17 @@ export default function Package({ img, packageType, packagePrice }) {
         {packagePrice}
       </p>
       <button
+        className="bg-gray-400 mt-[5px] py-[10px] rounded-md text-gray-100 font-bold"
+      >
+        View Details
+      </button>
+      <button
         onClick={() => addToCart(item)} // Add item to cart on click
         className="bg-blue-400 mt-[5px] py-[10px] rounded-md text-black font-bold"
       >
         Add To Cart
       </button>
+     
     </div>
   );
 }
