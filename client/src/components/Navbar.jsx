@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../contexts/CartContext'; // Import the useCart hook
 
 const Navbar = () => {
   const [asideOpen, setAsideOpen] = useState(false);
+  const { cartItems } = useCart(); // Use the useCart hook to access cartItems
   const navItems = [
     { icon: 'bx-home', label: 'HOME', href: '/' },
-    { icon: 'bx-log-in', label: 'LOGIN', href: '/login' }, // Added "Login" button
+    { icon: 'bx-log-in', label: 'LOGIN', href: '/login' },
     { icon: 'bx-user-plus', label: 'SIGN UP', href: '/signup' },
+    // Optionally, add a cart link directly in your navItems array or separately
   ];
+
   return (
-    <main className=" w-full bg-gray-100 text-gray-700">
+    <main className="w-full bg-gray-100 text-gray-700">
       <header className="flex w-full items-center justify-between border-b-2 border-gray-200 bg-white p-2">
         <div className="flex items-center space-x-2">
           <button
@@ -19,7 +23,6 @@ const Navbar = () => {
           >
             <i className="bx bx-menu"></i>
           </button>
-          {/* Logo added next to TripSet */}
           <img src="/logo.png" alt="Logo" className="h-8 w-8" />
           <div>TripSet</div>
         </div>
@@ -30,6 +33,11 @@ const Navbar = () => {
               <span className="ml-1 align-middle">{item.label}</span>
             </Link>
           ))}
+          {/* Display a cart link with the number of items */}
+          <Link to="/cart" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 hover:text-blue-600">
+            <i className="bx bx-shopping-bag text-xl align-middle"></i>
+            <span className="ml-1 align-middle">Cart ({cartItems.length})</span>
+          </Link>
         </div>
       </header>
       <div className="flex">
@@ -45,4 +53,5 @@ const Navbar = () => {
     </main>
   );
 };
+
 export default Navbar;
