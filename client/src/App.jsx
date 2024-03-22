@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Signup from './components/Signup';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
+import PackageDetails from './components/PackageDetails';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/cart" element={<Cart />}></Route> {/* Ensure you have a Cart route */}
             <Route path="signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/details" element={<PackageDetails />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
