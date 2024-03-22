@@ -3,6 +3,7 @@ import { graphqlHTTP } from "express-graphql";
 import MONGOOSE_CONNECTION from "./db/connection.js";
 import Package from "./models/PackageModel.js";
 import User from "./models/UserModel.js";
+import Category from "./models/CategoryModel.js";
 
 import {
   GraphQLID,
@@ -40,7 +41,12 @@ const UserType = new GraphQLObjectType({
     password: { type: new GraphQLNonNull(GraphQLString) },
   }),
 });
-// const CategoryType = new GraphQLObjectType({});
+const CategoryType = new GraphQLObjectType({
+  name: "Category",
+  fields: () => ({
+    name: { type: new GraphQLNonNull(GraphQLString) },
+  }),
+});
 
 const QueryType = new GraphQLObjectType({
   name: "Query",
@@ -60,6 +66,13 @@ const QueryType = new GraphQLObjectType({
       resolve: async () => {
         const users = await User.find({});
         return users;
+      },
+    },
+    categories: {
+      type: new GraphQLList(CategoryType),
+      resolve: async () => {
+        const categories = await Category.find({});
+        return categories;
       },
     },
   }),
