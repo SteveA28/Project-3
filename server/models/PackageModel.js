@@ -14,4 +14,4 @@ const PackageSchema = new mongoose.Schema({
   packageDetails: [String],
 });
 
-export default new mongoose.model("Packages", PackageSchema);
+export default new mongoose.model("packages", PackageSchema);

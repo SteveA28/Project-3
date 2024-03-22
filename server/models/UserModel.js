@@ -11,4 +11,4 @@ const UsersSchema = new mongoose.Schema({
   orders: [String],
 });
 
-export default new mongoose.model("Users", UsersSchema);
+export default new mongoose.model("users", UsersSchema);

@@ -5,6 +5,8 @@ import User from "../models/UserModel.js";
 import { hash } from "bcrypt";
 import MONGOOSE_CONNECTION from "../db/connection.js";
 
+
+
 await Category.deleteMany();
 const categories = await Category.insertMany([
   { name: "Family" },
