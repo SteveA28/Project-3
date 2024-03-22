@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [asideOpen, setAsideOpen] = useState(false);
   const navItems = [
-    { icon: 'bx-home', label: 'HOME', href: '/' },
-    { icon: 'bx-log-in', label: 'LOGIN', href: '/login' }, // Added "Login" button
-    { icon: 'bx-user-plus', label: 'SIGN UP', href: '/signup' },
+    { icon: 'bx-home', label: 'HOME', href: '/' }, // Added "HOME" button
+    { icon: 'bx-log-in', label: 'LOGIN', href: '/login' }, // Added "LOGIN" button
+    { icon: 'bx-user-plus', label: 'SIGN UP', href: '/signup' }, // Added "SIGN UP"
   ];
   return (
     <main className=" w-full bg-gray-100 text-gray-700">
@@ -19,7 +19,7 @@ const Navbar = () => {
           >
             <i className="bx bx-menu"></i>
           </button>
-          {/* Logo added next to TripSet */}
+          {/* Palm tree next to TripSet */}
           <img src="https://pngimg.com/d/palm_tree_PNG93280.png" alt="Logo" className="h-8 w-8" />
           <div>TripSet</div>
         </div>
