@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useCart } from "../contexts/CartContext"; // Adjust the path as necessary
+import { gql, useQuery } from "@apollo/client";
 
 export default function Package({ img, packageType, packagePrice }) {
+
   const { addToCart } = useCart(); // Use the useCart hook to access addToCart
 
   // Define the item structure to add to the cart
@@ -20,18 +23,19 @@ export default function Package({ img, packageType, packagePrice }) {
       <p className="package-price font-[600] text-center text-[1.6rem] mt-[40px] mb-[30px]">
         {packagePrice}
       </p>
-      <button
-        className="bg-gray-400 mt-[5px] py-[10px] rounded-md text-gray-100 font-bold"
+      <Link
+        className="bg-gray-400 mt-[5px] py-[10px] text-center rounded-md text-gray-100 font-bold"
+        to={"/details/jlkj"}
       >
         View Details
-      </button>
+        {/* <button className="bg-gray-400 mt-[5px] py-[10px] rounded-md text-gray-100 font-bold"></button> */}
+      </Link>
       <button
         onClick={() => addToCart(item)} // Add item to cart on click
         className="bg-blue-400 mt-[5px] py-[10px] rounded-md text-black font-bold"
       >
         Add To Cart
       </button>
-     
     </div>
   );
 }
