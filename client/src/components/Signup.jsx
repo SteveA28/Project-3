@@ -73,7 +73,7 @@ export default function Signup() {
     `;
 
     return (
-        <div className="signup-container" style={{ margin: '50px auto', width: '400px', display:"flex",flexDirection:"column",justifyContent:"center"}}>
+        <div className="signup-container" style={{ margin: '120px auto', width: '400px', display:"flex",flexDirection:"column",justifyContent:"center"}}>
             <h2>Signup</h2>
             <style>{styles}</style>
             <form onSubmit={handleSubmit}>
