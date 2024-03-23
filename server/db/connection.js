@@ -4,7 +4,8 @@ dotenv.config();
 
 try {
   await mongoose.connect(
-    "mongodb+srv://Rilwan410:Nawlir41001@cluster0.frzazvm.mongodb.net/",
+    procoess.env.MONGO_URI ||
+      "mongodb+srv://Rilwan410:Nawlir41001@cluster0.frzazvm.mongodb.net/",
     { dbName: "Project3" }
   );
   console.log("Successfully connected to Project 3 Database");
