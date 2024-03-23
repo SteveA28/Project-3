@@ -8,7 +8,7 @@ import { GraphQLSchema } from "graphql";
 import { MutationType, QueryType } from "./graphql/TypeDefs.js";
 
 const app = express();
-const PORT = 5000;
+const PORT = 3000;
 
 const schema = new GraphQLSchema({
   query: QueryType,
@@ -24,6 +24,6 @@ app.use(
   })
 );
 
-app.listen(5000, () => {
+app.listen(3000, () => {
   console.log(`server listening on port ${PORT}`);
 });
