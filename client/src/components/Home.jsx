@@ -42,7 +42,6 @@ function getImage(imgSrc) {
       return (imgSrc = individualPlatinum);
       break;
     default:
-      return "fuck off";
   }
   return imgSrc;
 }
