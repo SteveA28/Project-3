@@ -5,8 +5,6 @@ import User from "../models/UserModel.js";
 import { hash } from "bcrypt";
 import MONGOOSE_CONNECTION from "../db/connection.js";
 
-
-
 await Category.deleteMany();
 const categories = await Category.insertMany([
   { name: "Family" },
@@ -18,19 +16,19 @@ console.log("category data successful");
 await Package.deleteMany();
 const packages = await Package.insertMany([
   {
-    name: "Family Basic Package",
-    image: "family-basic.jpg",
-    categoryId: categories[0]._id,
-    price: 650,
+    name: "Individual Basic Package",
+    image: "individual-basic.jpeg",
+    categoryId: categories[2]._id,
+    price: 500,
     packageDetails: [
       "3-day 4-star Hotel accomodations, Commercial Flight Fees covered",
     ],
   },
   {
-    name: "Family Premium Package",
-    image: "family-premium.jpeg",
-    categoryId: categories[0]._id,
-    price: 850,
+    name: "Individual Premium Package",
+    image: "individual-premium.jpeg",
+    categoryId: categories[2]._id,
+    price: 750,
     packageDetails: [
       "5-day 5-star Hotel accomodations",
       "First Class Flight Fees covered",
@@ -39,10 +37,10 @@ const packages = await Package.insertMany([
     ],
   },
   {
-    name: "Family Platinum Package",
-    image: "family-platinum.jpeg",
-    categoryId: categories[0]._id,
-    price: 1100,
+    name: "Individual Platinum Package",
+    image: "individual-platinum.jpeg",
+    categoryId: categories[2]._id,
+    price: 950,
     packageDetails: [
       "9-day 5-star Hotel accomodations",
       "First Class Flight Fees Covered",
@@ -86,19 +84,19 @@ const packages = await Package.insertMany([
     ],
   },
   {
-    name: "Individual Basic Package",
-    image: "individual-basic.jpeg",
-    categoryId: categories[2]._id,
-    price: 500,
+    name: "Family Basic Package",
+    image: "family-basic.jpg",
+    categoryId: categories[0]._id,
+    price: 650,
     packageDetails: [
       "3-day 4-star Hotel accomodations, Commercial Flight Fees covered",
     ],
   },
   {
-    name: "Individual Premium Package",
-    image: "individual-premium.jpeg.jpeg",
-    categoryId: categories[2]._id,
-    price: 750,
+    name: "Family Premium Package",
+    image: "family-premium.jpeg",
+    categoryId: categories[0]._id,
+    price: 850,
     packageDetails: [
       "5-day 5-star Hotel accomodations",
       "First Class Flight Fees covered",
@@ -107,10 +105,10 @@ const packages = await Package.insertMany([
     ],
   },
   {
-    name: "Individual Platinum Package",
-    image: "individual-platinum.jpeg",
-    categoryId: categories[2]._id,
-    price: 950,
+    name: "Family Platinum Package",
+    image: "family-platinum.jpeg",
+    categoryId: categories[0]._id,
+    price: 1100,
     packageDetails: [
       "9-day 5-star Hotel accomodations",
       "First Class Flight Fees Covered",

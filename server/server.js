@@ -4,6 +4,7 @@ import { graphqlHTTP } from "express-graphql";
 import { GraphQLSchema } from "graphql";
 
 import { MutationType, QueryType } from "./graphql/TypeDefs.js";
+import cors from "cors";
 
 const app = express();
 const PORT = 5000;
@@ -13,7 +14,7 @@ const schema = new GraphQLSchema({
   mutation: MutationType,
 });
 
-app.use(cors())
+app.use(cors());
 app.use(
   "/graphql",
   graphqlHTTP({
