@@ -21,7 +21,8 @@ const packages = await Package.insertMany([
     categoryId: categories[2]._id,
     price: 500,
     packageDetails: [
-      "3-day 4-star Hotel accomodations, Commercial Flight Fees covered",
+      "3-day 4-star Hotel accomodations",
+      " Commercial Flight Fees covered",
     ],
   },
   {
@@ -55,7 +56,8 @@ const packages = await Package.insertMany([
     categoryId: categories[1]._id,
     price: 750,
     packageDetails: [
-      "3-day 4-star Hotel accomodations, Commercial Flight Fees covered",
+      "3-day 4-star Hotel accomodations",
+      "Commercial Flight Fees covered",
     ],
   },
   {
@@ -89,7 +91,8 @@ const packages = await Package.insertMany([
     categoryId: categories[0]._id,
     price: 650,
     packageDetails: [
-      "3-day 4-star Hotel accomodations, Commercial Flight Fees covered",
+      "3-day 4-star Hotel accomodations",
+      "Commercial Flight Fees covered",
     ],
   },
   {
