@@ -94,7 +94,7 @@ export default function PackageDetails() {
               alt=""
             />
           </div>
-          <div className="border-gray-500  relative border-solid border-[1.5px] flex flex-col justify-between py-[40px] px-[30px] rounded-md  shadow-[rgba(0,0,0,0.2)]  shadow-sm h-[600px]">
+          <div className="border-gray-500  relative border-solid border-[1.5px] flex flex-col justify-between py-[50px] min-h-[600px] px-[30px] rounded-md  shadow-[rgba(0,0,0,0.2)]  shadow-sm">
             <div>
               <h2 className="text-[2.5rem]   mb-[20px] font-[500] text-[rgba(0,0,0,0.8)] text-center">
                 Package Details
@@ -114,11 +114,11 @@ export default function PackageDetails() {
             </div>
 
             {/* <div className="absolute bottom-[50px] right-[50px]"> */}
-            <div className="">
-              <p className="font-[500]  mb-[26px]  text-[2.5rem] mt-[50px]  ml-[10px] text-green-600">
+            <div className="mt-[20px]">
+              <p className="font-[500]    text-[2.5rem]  -[10px] ml-[10px] text-green-600">
                 Price : {`$${getData.getPackage.price}`}
               </p>
-              <div className="w-full  text-center flex justify-center gap-[10px]">
+              <div className="w-full mt-[10px]  text-center flex justify-center gap-[10px]">
                 <button className="bg-blue-500 p-[10px] w-[200px] text-[1.1rem] rounded-[10px] text-gray-200">
                   Add To Cart
                 </button>
