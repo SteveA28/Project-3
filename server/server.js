@@ -12,6 +12,8 @@ const schema = new GraphQLSchema({
   query: QueryType,
   mutation: MutationType,
 });
+
+app.use(cors())
 app.use(
   "/graphql",
   graphqlHTTP({

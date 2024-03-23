@@ -4,13 +4,14 @@ import User from "../models/UserModel.js";
 import Category from "../models/CategoryModel.js";
 import {
   GraphQLID,
+  GraphQLInputObjectType,
   GraphQLInt,
   GraphQLList,
   GraphQLNonNull,
   GraphQLObjectType,
+  GraphQLScalarType,
   GraphQLString,
 } from "graphql";
-
 
 const PackageType = new GraphQLObjectType({
   name: "Packages",
@@ -23,9 +24,17 @@ const PackageType = new GraphQLObjectType({
     price: {
       type: new GraphQLNonNull(GraphQLInt),
     },
-    // packageDetails: {
-    //   type: new GraphQLList,
-    // },
+    // categoryId: { type: GraphQLID },
+    category: {
+      type: CategoryType,
+      resolve: async (parent, args) => {
+        const categories = await Category.findOne({ _id: parent.categoryId });
+        return categories;
+      },
+    },
+    packageDetails: {
+      type: new GraphQLList(GraphQLString),
+    },
   }),
 });
 const UserType = new GraphQLObjectType({
@@ -40,14 +49,16 @@ const CategoryType = new GraphQLObjectType({
   name: "Category",
   fields: () => ({
     name: { type: new GraphQLNonNull(GraphQLString) },
+    id: {type:GraphQLID}
   }),
 });
 
+// MUTATIONS
 const MutationType = new GraphQLObjectType({
   name: "Mutation",
   description: "Mutations",
   fields: () => ({
-    findPackage: {
+    getPackage: {
       type: PackageType,
       description: "Get Single Package",
       args: {
@@ -58,9 +69,22 @@ const MutationType = new GraphQLObjectType({
         return singlePackage;
       },
     },
+    getUser: {
+      type: UserType,
+      description: "Get Single User",
+      args: {
+        id: { type: GraphQLID },
+      },
+      resolve: async (_, args) => {
+        const user = await User.findOne({ _id: args.id });
+        return user;
+      },
+    },
+    // getCategory:{}
   }),
 });
 
+// QUERIES
 const QueryType = new GraphQLObjectType({
   name: "Query",
   description: "Root Query",
