@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext'; // Import the useCart hook
+import { useAuth } from '../contexts/AuthContext'; // Import the useAuth hook
 
 const Navbar = () => {
   const [asideOpen, setAsideOpen] = useState(false);
   const { cartItems } = useCart(); // Use the useCart hook to access cartItems
-  const navItems = [
+  const { isLoggedIn, logout } = useAuth(); // Use the useAuth hook to access authentication state and logout function
+
+  // Adjust navItems based on login state
+  let navItems = [
     { icon: 'bx-home', label: 'HOME', href: '/' },
-    { icon: 'bx-log-in', label: 'LOGIN', href: '/login' },
-    { icon: 'bx-user-plus', label: 'SIGN UP', href: '/signup' },
-    // Optionally, add a cart link directly in your navItems array or separately
+    ...isLoggedIn ? [] : [
+      { icon: 'bx-log-in', label: 'LOGIN', href: '/login' },
+      { icon: 'bx-user-plus', label: 'SIGN UP', href: '/signup' },
+    ],
   ];
 
   return (
@@ -23,7 +28,6 @@ const Navbar = () => {
           >
             <i className="bx bx-menu"></i>
           </button>
-          {/* Resolved conflict by including the detailed logo from the main branch */}
           <img src="https://pngimg.com/d/palm_tree_PNG93280.png" alt="Logo" className="h-8 w-8" />
           <div>TripSet</div>
         </div>
@@ -34,7 +38,12 @@ const Navbar = () => {
               <span className="ml-1 align-middle">{item.label}</span>
             </Link>
           ))}
-          {/* Display a cart link with the number of items */}
+          {isLoggedIn && (
+            <>
+              <span className="px-3 py-2 rounded-md text-sm font-medium">Logged in</span>
+              <button onClick={logout} className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 hover:text-blue-600">Logout</button>
+            </>
+          )}
           <Link to="/cart" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 hover:text-blue-600">
             <i className="bx bx-shopping-bag text-xl align-middle"></i>
             <span className="ml-1 align-middle">Cart ({cartItems.length})</span>
