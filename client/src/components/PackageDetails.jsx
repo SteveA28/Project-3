@@ -82,7 +82,7 @@ export default function PackageDetails() {
   return (
     Object.entries(getData).length > 0 && (
       <section className=" bg-blue-200  overflow-hidden py-[40px]">
-        <div className=" gap-[180px] flex h-[500px] w-full">
+        <div className=" gap-[120px] flex h-[500px] w-full">
           <div class="flex flex-col justify-center ">
             <h2 className="text-[3.5rem] font-bold whitespace-nowrap">
               {" "}
