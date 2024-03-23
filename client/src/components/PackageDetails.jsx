@@ -22,36 +22,28 @@ const GET_SINGLE_PACKAGE = gql`
     }
   }
 `;
+
 export default function PackageDetails() {
   function getImage(imgSrc) {
     switch (imgSrc) {
       case "family-basic.jpg":
         return (imgSrc = familyBasic);
-        break;
       case "family-premium.jpeg":
         return (imgSrc = familyPremium);
-        break;
       case "family-platinum.jpeg":
         return (imgSrc = familyPlatinum);
-        break;
       case "group-basic.jpeg":
         return (imgSrc = groupBasic);
-        break;
       case "group-premium.jpeg":
         return (imgSrc = groupPremium);
-        break;
       case "group-platinum.jpeg":
         return (imgSrc = groupPlatinum);
-        break;
       case "individual-basic.jpeg":
         return (imgSrc = individualBasic);
-        break;
       case "individual-premium.jpeg":
         return (imgSrc = individualPremium);
-        break;
       case "individual-platinum.jpeg":
         return (imgSrc = individualPlatinum);
-        break;
       default:
         return "fuck off";
     }
@@ -75,17 +67,12 @@ export default function PackageDetails() {
     getPackage();
   }, []);
 
-  // getPackage();
-
-  // console.log(data);
-
   return (
     Object.entries(getData).length > 0 && (
-      <section className="h-screen  mt-[70px]  py-[40px]">
-        <div className=" gap-[90px] flex jusitfy-center h-[500px] w-full">
+      <section className="h-screen mt-[70px] py-[40px]">
+        <div className="gap-[90px] flex jusitfy-center h-[500px] w-full">
           <div class="flex flex-col justify-center ">
             <h2 className="text-[3.2rem] ml-[10px] text-center text-[rgba(0,0,0,0.7)] font-bold">
-              {" "}
               {getData.getPackage.name}
             </h2>
             <img
@@ -96,7 +83,7 @@ export default function PackageDetails() {
           </div>
           <div className="border-gray-500  relative border-solid border-[1.5px] flex flex-col justify-between py-[50px] min-h-[600px] px-[30px] rounded-md  shadow-[rgba(0,0,0,0.2)]  shadow-sm">
             <div>
-              <h2 className="text-[2.5rem]   mb-[20px] font-[500] text-[rgba(0,0,0,0.8)] text-center">
+              <h2 className="text-[2.5rem] mb-[20px] font-[500] text-[rgba(0,0,0,0.8)] text-center">
                 Package Details
               </h2>
               <ul className="">
@@ -112,20 +99,10 @@ export default function PackageDetails() {
                 })}
               </ul>
             </div>
-
-            {/* <div className="absolute bottom-[50px] right-[50px]"> */}
             <div className="mt-[20px]">
-              <p className="font-[500]    text-[2.5rem]  -[10px] ml-[10px] text-green-600">
+              <p className="font-[500] text-[2.5rem] -[10px] ml-[10px] text-green-600">
                 Price : {`$${getData.getPackage.price}`}
               </p>
-              <div className="w-full mt-[10px]  text-center flex justify-center gap-[10px]">
-                <button className="bg-blue-500 p-[10px] w-[200px] text-[1.1rem] rounded-[10px] text-gray-200">
-                  Add To Cart
-                </button>
-                <button className="bg-blue-500 p-[10px] w-[200px] text-[1.1rem] rounded-[10px] text-gray-200">
-                  Remove From Cart
-                </button>
-              </div>
             </div>
           </div>
         </div>
