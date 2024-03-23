@@ -13,7 +13,7 @@ const Navbar = () => {
   ];
 
   return (
-    <main className="w-full bg-gray-100 text-gray-700">
+    <main className="w-full bg-gray-100 text-gray-700 fixed top-0 z-10">
       <header className="flex w-full items-center justify-between border-b-2 border-gray-200 bg-white p-2">
         <div className="flex items-center space-x-2">
           <button

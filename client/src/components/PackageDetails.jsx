@@ -81,48 +81,53 @@ export default function PackageDetails() {
 
   return (
     Object.entries(getData).length > 0 && (
-      <section className=" bg-blue-200  overflow-hidden py-[40px]">
-        <div className=" gap-[120px] flex h-[500px] w-full">
+      <section className="h-screen  mt-[70px]  py-[40px]">
+        <div className=" gap-[90px] flex jusitfy-center h-[500px] w-full">
           <div class="flex flex-col justify-center ">
-            <h2 className="text-[3.5rem] font-bold whitespace-nowrap">
+            <h2 className="text-[3.2rem] ml-[10px] text-center text-[rgba(0,0,0,0.7)] font-bold">
               {" "}
               {getData.getPackage.name}
             </h2>
             <img
               src={getImage(getData.getPackage.image)}
-              className="h-[400px] w-[750px] object-cover ml-[20px]"
+              className="h-[400px] w-[700px] mt-[30px] shadow-md shadow-[rgba(0,0,0,0.4)] object-cover ml-[20px]"
               alt=""
             />
           </div>
-          <div>
-            <h2 className="text-[3rem]  mt-[5px] mb-[10px] font-bold">
-              Package Details
-            </h2>
-            <ul className="">
-              {getData.getPackage.packageDetails.map((data, index) => {
-                return (
-                  <li
-                    className="text-[1.5rem] mb-[18px] font-[500] ml-[40px]  list-disc"
-                    key={index}
-                  >
-                    {data}
-                  </li>
-                );
-              })}
+          <div className="border-gray-500  relative border-solid border-[1.5px] flex flex-col justify-between py-[40px] px-[30px] rounded-md  shadow-[rgba(0,0,0,0.2)]  shadow-sm h-[600px]">
+            <div>
+              <h2 className="text-[2.5rem]   mb-[20px] font-[500] text-[rgba(0,0,0,0.8)] text-center">
+                Package Details
+              </h2>
+              <ul className="">
+                {getData.getPackage.packageDetails.map((data, index) => {
+                  return (
+                    <li
+                      className="text-[1.4rem] mb-[15px] font-[400]  ml-[40px]  list-disc"
+                      key={index}
+                    >
+                      {data}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
 
-              <p className="font-bold text-[2rem] mt-[50px] text-blue-600">
+            {/* <div className="absolute bottom-[50px] right-[50px]"> */}
+            <div className="">
+              <p className="font-[500]  mb-[26px]  text-[2.5rem] mt-[50px]  ml-[10px] text-green-600">
                 Price : {`$${getData.getPackage.price}`}
               </p>
-            </ul>
+              <div className="w-full  text-center flex justify-center gap-[10px]">
+                <button className="bg-blue-500 p-[10px] w-[200px] text-[1.1rem] rounded-[10px] text-gray-200">
+                  Add To Cart
+                </button>
+                <button className="bg-blue-500 p-[10px] w-[200px] text-[1.1rem] rounded-[10px] text-gray-200">
+                  Remove From Cart
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="w-full mt-[40px] flex justify-center gap-[10px]">
-          <button className="bg-blue-600 p-[10px] w-[200px] text-[1.1rem] rounded-[10px] text-gray-200">
-            Add To Cart
-          </button>
-          <button className="bg-blue-600 p-[10px] w-[200px] text-[1.1rem] rounded-[10px] text-gray-200">
-            Remove From Cart
-          </button>
         </div>
       </section>
     )

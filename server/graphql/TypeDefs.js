@@ -24,7 +24,7 @@ const PackageType = new GraphQLObjectType({
     price: {
       type: new GraphQLNonNull(GraphQLInt),
     },
-    // categoryId: { type: GraphQLID },
+
     category: {
       type: CategoryType,
       resolve: async (parent, args) => {

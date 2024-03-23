@@ -1,10 +1,11 @@
 import express from "express";
+import cors from "cors";
+
 import { graphqlHTTP } from "express-graphql";
 
 import { GraphQLSchema } from "graphql";
 
 import { MutationType, QueryType } from "./graphql/TypeDefs.js";
-import cors from "cors";
 
 const app = express();
 const PORT = 5000;
