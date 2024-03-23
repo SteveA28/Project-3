@@ -1,6 +1,17 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useAuth } from '../contexts/AuthContext'; // Import useAuth
 
 function LoginForm() {
+  const { login } = useAuth(); // Use useAuth hook to access login function
+  const navigate = useNavigate(); // Hook to navigate to different routes
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevent the form from refreshing the page
+    login(); // Call login function from AuthContext
+    navigate('/'); // Redirect to the homepage
+  };
+
   return (
     <div className="bg-gray-100 flex justify-center items-center h-screen">
       {/* Left: Image */}
@@ -10,7 +21,7 @@ function LoginForm() {
       {/* Right: Login Form */}
       <div className="lg:p-36 md:p-52 sm:p-20 p-8 w-full lg:w-1/2">
         <h1 className="text-2xl font-semibold mb-4">Login</h1>
-        <form action="#" method="POST">
+        <form onSubmit={handleSubmit}> {/* Updated to use handleSubmit */}
           {/* Username Input */}
           <div className="mb-4">
             <label htmlFor="username" className="block text-gray-600">Username</label>
