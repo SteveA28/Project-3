@@ -45,7 +45,6 @@ export default function PackageDetails() {
       case "individual-platinum.jpeg":
         return (imgSrc = individualPlatinum);
       default:
-        return "fuck off";
     }
     return imgSrc;
   }
