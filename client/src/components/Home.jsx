@@ -177,6 +177,7 @@ export default function Home() {
                         img={getImage(data.image)}
                         packageType={data.name}
                         packagePrice={`$${data.price}`}
+                        packageId={data.id}
                       />
                     );
                   })}
