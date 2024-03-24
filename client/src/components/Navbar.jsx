@@ -8,7 +8,7 @@ const Navbar = () => {
   const { cartItems } = useCart(); // Use the useCart hook to access cartItems
   const { isLoggedIn, logout } = useAuth(); // Use the useAuth hook to access authentication state and logout function
 
-  // Adjust navItems based on login state
+  // Adjust navItems based on login state, excluding Contact Us for now
   let navItems = [
     { icon: 'bx-home', label: 'HOME', href: '/' },
     ...isLoggedIn ? [] : [
@@ -47,6 +47,11 @@ const Navbar = () => {
           <Link to="/cart" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 hover:text-blue-600">
             <i className="bx bx-shopping-bag text-xl align-middle"></i>
             <span className="ml-1 align-middle">Cart ({cartItems.length})</span>
+          </Link>
+          {/* Directly adding the Contact Us button here */}
+          <Link to="/contact-us" className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100 hover:text-blue-600">
+            <i className="bx bx-message-square-detail text-xl align-middle"></i>
+            <span className="ml-1 align-middle">Contact Us</span>
           </Link>
         </div>
       </header>
