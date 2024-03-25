@@ -80,7 +80,7 @@ export default function PackageDetails() {
               alt=""
             />
           </div>
-          <div className="border-gray-500  relative border-solid border-[1.5px] flex flex-col justify-between py-[50px] min-h-[600px] px-[30px] rounded-md  shadow-[rgba(0,0,0,0.2)]  shadow-sm">
+          <div className="border-gray-500  relative border-solid border-[1.5px] flex flex-col mr-[20px] justify-between py-[50px] w-[40%] overflow-x-scroll min-h-[600px] px-[30px] rounded-md  shadow-[rgba(0,0,0,0.2)]  shadow-sm">
             <div>
               <h2 className="text-[2.5rem] mb-[20px] font-[500] text-[rgba(0,0,0,0.8)] text-center">
                 Package Details
