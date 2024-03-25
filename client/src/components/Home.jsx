@@ -71,25 +71,7 @@ export default function Home() {
         {/* Other introductory content */}
       </div>
       <main className="px-[90px]">
-        {/* Descriptions and category selection */}
-        <div className="category-details">
-          <h2 className="font-bold text-left text-[1.2rem] mt-[40px]">Choose A Category:</h2>
-          <div className="categories mt-[20px] flex gap-4">
-            {["Individual", "Family", "Group"].map((category) => (
-              <div 
-                key={category} 
-                className={`category bg-blue-400 cursor-pointer font-[500] text-[1.2rem] font-montserrat p-3 min-w-[140px] text-center rounded-md ${selectedCategory === category ? "bg-blue-600" : ""}`} 
-                onClick={() => handleCategorySelect(category)}>
-                {category}
-              </div>
-            ))}
-            <div 
-                className="category bg-gray-400 cursor-pointer font-[500] text-[1.2rem] font-montserrat p-3 min-w-[140px] text-center rounded-md" 
-                onClick={() => setSelectedCategory("")}>
-                Show All
-              </div>
-          </div>
-        </div>
+        
         <div className="package-details flex flex-col ">
           <h2 className="font-bold text-left text-[1.2rem] mt-[40px]">Our Packages:</h2>
           <div className="packages mt-[20px] flex gap-4 gap-y-[40px] justify-center flex-wrap">
