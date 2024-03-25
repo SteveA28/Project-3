@@ -1,36 +1,36 @@
 import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import bahamas from "../assets/img/bahamas.webp";
-import familyBasic from "../assets/img/family-basic.jpg";
-import familyPremium from "../assets/img/family-premium.jpeg";
-import familyPlatinum from "../assets/img/family-platinum.jpeg";
-import groupBasic from "../assets/img/group-basic.jpeg";
-import groupPremium from "../assets/img/group-premium.jpeg";
-import groupPlatinum from "../assets/img/group-platinum.jpeg";
-import individualBasic from "../assets/img/individual-basic.jpeg";
-import individualPremium from "../assets/img/individual-premium.jpeg";
-import individualPlatinum from "../assets/img/individual-platinum.jpeg";
+import familyBasic from "../assets/img/family-basic.png";
+import familyPremium from "../assets/img/family-premium.png";
+import familyPlatinum from "../assets/img/family-platinum.png";
+import groupBasic from "../assets/img/group-basic.png";
+import groupPremium from "../assets/img/group-premium.png";
+import groupPlatinum from "../assets/img/group-platinum.png";
+import individualBasic from "../assets/img/individual-basic.png";
+import individualPremium from "../assets/img/individual-premium.png";
+import individualPlatinum from "../assets/img/individual-platinum.png";
 import Package from "./Package";
 
 function getImage(imgSrc) {
   switch (imgSrc) {
-    case "family-basic.jpg":
+    case "family-basic.png":
       return familyBasic;
-    case "family-premium.jpeg":
+    case "family-premium.png":
       return familyPremium;
-    case "family-platinum.jpeg":
+    case "family-platinum.png":
       return familyPlatinum;
-    case "group-basic.jpeg":
+    case "group-basic.png":
       return groupBasic;
-    case "group-premium.jpeg":
+    case "group-premium.png":
       return groupPremium;
-    case "group-platinum.jpeg":
+    case "group-platinum.png":
       return groupPlatinum;
-    case "individual-basic.jpeg":
+    case "individual-basic.png":
       return individualBasic;
-    case "individual-premium.jpeg":
+    case "individual-premium.png":
       return individualPremium;
-    case "individual-platinum.jpeg":
+    case "individual-platinum.png":
       return individualPlatinum;
     default:
       return imgSrc;
@@ -56,8 +56,10 @@ export default function Home() {
     setSelectedCategory(category);
   };
 
-  const filteredPackages = data?.packages.filter((pkg) => 
-    selectedCategory === "" || pkg.name.toLowerCase().includes(selectedCategory.toLowerCase())
+  const filteredPackages = data?.packages.filter(
+    (pkg) =>
+      selectedCategory === "" ||
+      pkg.name.toLowerCase().includes(selectedCategory.toLowerCase())
   );
 
   if (loading) return <div>Loading...</div>;
@@ -71,12 +73,19 @@ export default function Home() {
         {/* Other introductory content */}
       </div>
       <main className="px-[90px]">
-        
         <div className="package-details flex flex-col ">
-          <h2 className="font-bold text-left text-[1.2rem] mt-[40px]">Our Packages:</h2>
+          <h2 className="font-bold text-left text-[1.2rem] mt-[40px]">
+            Our Packages:
+          </h2>
           <div className="packages mt-[20px] flex gap-4 gap-y-[40px] justify-center flex-wrap">
             {filteredPackages.map((pkg) => (
-              <Package key={pkg.id} img={getImage(pkg.image)} packageType={pkg.name} packagePrice={`$${pkg.price}`} packageId={pkg.id} />
+              <Package
+                key={pkg.id}
+                img={getImage(pkg.image)}
+                packageType={pkg.name}
+                packagePrice={`$${pkg.price}`}
+                packageId={pkg.id}
+              />
             ))}
           </div>
         </div>

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import familyBasic from "../assets/img/family-basic.jpg";
-import familyPremium from "../assets/img/family-premium.jpeg";
-import familyPlatinum from "../assets/img/family-platinum.jpeg";
-import groupBasic from "../assets/img/group-basic.jpeg";
-import groupPremium from "../assets/img/group-premium.jpeg";
-import groupPlatinum from "../assets/img/group-platinum.jpeg";
-import individualBasic from "../assets/img/individual-basic.jpeg";
-import individualPremium from "../assets/img/individual-premium.jpeg";
-import individualPlatinum from "../assets/img/individual-platinum.jpeg";
+import familyBasic from "../assets/img/family-basic.png";
+import familyPremium from "../assets/img/family-premium.png";
+import familyPlatinum from "../assets/img/family-platinum.png";
+import groupBasic from "../assets/img/group-basic.png";
+import groupPremium from "../assets/img/group-premium.png";
+import groupPlatinum from "../assets/img/group-platinum.png";
+import individualBasic from "../assets/img/individual-basic.png";
+import individualPremium from "../assets/img/individual-premium.png";
+import individualPlatinum from "../assets/img/individual-platinum.png";
 import { useParams } from "react-router-dom";
 import { gql, useMutation } from "@apollo/client";
 
@@ -26,23 +26,23 @@ const GET_SINGLE_PACKAGE = gql`
 export default function PackageDetails() {
   function getImage(imgSrc) {
     switch (imgSrc) {
-      case "family-basic.jpg":
+      case "family-basic.png":
         return (imgSrc = familyBasic);
-      case "family-premium.jpeg":
+      case "family-premium.png":
         return (imgSrc = familyPremium);
-      case "family-platinum.jpeg":
+      case "family-platinum.png":
         return (imgSrc = familyPlatinum);
-      case "group-basic.jpeg":
+      case "group-basic.png":
         return (imgSrc = groupBasic);
-      case "group-premium.jpeg":
+      case "group-premium.png":
         return (imgSrc = groupPremium);
-      case "group-platinum.jpeg":
+      case "group-platinum.png":
         return (imgSrc = groupPlatinum);
-      case "individual-basic.jpeg":
+      case "individual-basic.png":
         return (imgSrc = individualBasic);
-      case "individual-premium.jpeg":
+      case "individual-premium.png":
         return (imgSrc = individualPremium);
-      case "individual-platinum.jpeg":
+      case "individual-platinum.png":
         return (imgSrc = individualPlatinum);
       default:
     }
