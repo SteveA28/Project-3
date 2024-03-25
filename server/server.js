@@ -41,8 +41,8 @@ app.post('/send-email', (req, res) => {
   const { name, email, message } = req.body;
 
   const mailOptions = {
-    from: 'vacationbundles123@gmail.com', // Your Gmail email address
-    to: email, // Use the provided email address from the form
+    from: email, // Your Gmail email address
+    to: "vacationbundles123@gmail.com", // Use the provided email address from the form
     subject: 'New Contact Us Message', // Email subject
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // Email content
   };
