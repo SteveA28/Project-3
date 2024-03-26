@@ -7,8 +7,7 @@
     "develop": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
     "seed": "cd server && npm run seed",
     "build": "cd client && npm run build",
-    "postinstall": "cd server && npm i --force && cd ../client && npm i --force",
-    "render-build": "npm run postinstall && npm run build"
+    "install": "cd server && npm i --force && cd ../client && npm i --force"
   },
   "keywords": [],
   "author": "",
