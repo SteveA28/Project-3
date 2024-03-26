@@ -29,31 +29,31 @@ app.use(
 );
 
 // Add the /send-email POST route
-app.post('/send-email', (req, res) => {
+app.post("/send-email", (req, res) => {
   const transporter = nodemailer.createTransport({
-    service: 'gmail', // Use Gmail as the service
+    service: "gmail", // Use Gmail as the service
     auth: {
-      user: 'vacationbundles123@gmail.com', // Your Gmail email address
-      pass: 'Vacation123', // Your Gmail password
+      user: "vacationbundles123@gmail.com", // Your Gmail email address
+      pass: "qlbr jcra umvx jcaf", // Your Gmail password
     },
   });
 
   const { name, email, message } = req.body;
 
   const mailOptions = {
-    from: 'vacationbundles123@gmail.com', // Your Gmail email address
+    from: "vacationbundles123@gmail.com", // Your Gmail email address
     to: email, // Use the provided email address from the form
-    subject: 'New Contact Us Message', // Email subject
+    subject: "New Contact Us Message", // Email subject
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // Email content
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
-      res.status(500).send('Error sending email');
+      res.status(500).send("Error sending email");
     } else {
-      console.log('Email sent: ' + info.response);
-      res.status(200).send('Email sent successfully');
+      console.log("Email sent: " + info.response);
+      res.status(200).send("Email sent successfully");
     }
   });
 });
