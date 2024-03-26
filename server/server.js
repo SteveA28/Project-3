@@ -1,13 +1,14 @@
 import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
+import path from 'path'; // Import path module
 
 import { graphqlHTTP } from "express-graphql";
 import { GraphQLSchema } from "graphql";
 import { MutationType, QueryType } from "./graphql/TypeDefs.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Updated to use an environment variable for port
 
 // Initialize the GraphQL schema
 const schema = new GraphQLSchema({
@@ -30,32 +31,17 @@ app.use(
 
 // Add the /send-email POST route
 app.post('/send-email', (req, res) => {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail', // Use Gmail as the service
-    auth: {
-      user: 'vacationbundles123@gmail.com', // Your Gmail email address
-      pass: 'qlbr jcra umvx jcaf', // Your Gmail password
-    },
-  });
+  // Your existing nodemailer code here
+});
 
-  const { name, email, message } = req.body;
+// Add this BEFORE your server listening call, and AFTER all other route definitions
+// Serve static files from the React app
+app.use(express.static('client'));
 
-  const mailOptions = {
-    from: email, // Your Gmail email address
-    to: "vacationbundles123@gmail.com", // Use the provided email address from the form
-    subject: 'New Contact Us Message', // Email subject
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`, // Email content
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      res.status(500).send('Error sending email');
-    } else {
-      console.log('Email sent: ' + info.response);
-      res.status(200).send('Email sent successfully');
-    }
-  });
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'index.html'));
 });
 
 // Server listening
