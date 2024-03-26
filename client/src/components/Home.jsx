@@ -66,7 +66,7 @@ export default function Home() {
   if (error) return <div>Error! {error.message}</div>;
 
   return (
-    <section className="pb-[40px]">
+    <section className="pb-[40px">
       {/* Image and intro sections */}
       <div className="relative">
         <img src={bahamas} className="h-[450px] w-full shadow-md" alt="" />

@@ -68,15 +68,15 @@ export default function PackageDetails() {
 
   return (
     Object.entries(getData).length > 0 && (
-      <section className="h-screen mt-[70px] py-[40px]">
-        <div className="gap-[90px] flex jusitfy-center h-[500px] w-full">
+      <section className=" min-h-[740px] max-h-screen mt-[70px] py-[40px] bg-gray-100">
+        <div className="gap-[50px] flex jusitfy-center h-[500px] w-full">
           <div class="flex flex-col justify-center ">
             <h2 className="text-[3.2rem] ml-[10px] text-center text-[rgba(0,0,0,0.7)] font-bold">
               {getData.getPackage.name}
             </h2>
             <img
               src={getImage(getData.getPackage.image)}
-              className="h-[400px] w-[700px] mt-[30px] shadow-md shadow-[rgba(0,0,0,0.4)] object-cover ml-[20px]"
+              className="h-[400px] w-[700px] mt-[30px] shadow-md shadow-[rgba(0,0,0,0.4)] object-cover ml-[50px]"
               alt=""
             />
           </div>
