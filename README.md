@@ -38,7 +38,7 @@ Cart
 
 # Deployement Link
 
-(add deoployment link here)
+(add deployment link here)
 
 # Contributers
 
