@@ -5,7 +5,9 @@ import "./index.css";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:3000/graphql",
+  uri:
+    "http://localhost:3000/graphql" ||
+    "https://tripsetvacations-6.onrender.com/",
   cache: new InMemoryCache(),
 });
 
