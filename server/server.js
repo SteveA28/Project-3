@@ -34,7 +34,7 @@ app.post('/send-email', (req, res) => {
     service: 'gmail', // Use Gmail as the service
     auth: {
       user: 'vacationbundles123@gmail.com', // Your Gmail email address
-      pass: 'Vacation123', // Your Gmail password
+      pass: 'qlbr jcra umvx jcaf', // Your Gmail password
     },
   });
 
