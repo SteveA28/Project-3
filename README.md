@@ -10,12 +10,16 @@ Npm install
 
 # Screenshots
 
+Homepage
 ![homepage](https://github.com/SteveA28/TripSetVacations/assets/145178643/28a2779e-4475-43eb-8d1d-ed6ace305dc6)
 
+Login Page
 ![login](https://github.com/SteveA28/TripSetVacations/assets/145178643/35a60471-48b0-453a-b86a-f624d18a7756)
 
+Package Details Page
 ![packagedetails](https://github.com/SteveA28/TripSetVacations/assets/145178643/1a81da7f-69ab-421a-8c0c-b639d0256063)
 
+Cart
 ![calendar](https://github.com/SteveA28/TripSetVacations/assets/145178643/45464eae-26d2-4c56-a2e0-d589742f6f51)
 
 # Contributers
