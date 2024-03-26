@@ -35,12 +35,12 @@ const ContactUs = () => {
       console.log('Form submitted successfully');
       alert('Message sent successfully.');
 
-      // Optionally reset form fields here
+      //Optionally reset form fields here
       setFormData({
         name: '',
         email: '',
-        message: '',
-      });
+         message: '',
+       });
 
     } catch (error) {
       // Handle error situation
@@ -127,6 +127,5 @@ const ContactUs = () => {
     </div>
   );
 }
-
 export default ContactUs;
 
