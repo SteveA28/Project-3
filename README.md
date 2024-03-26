@@ -18,7 +18,6 @@ Npm install
 
 ![calendar](https://github.com/SteveA28/TripSetVacations/assets/145178643/45464eae-26d2-4c56-a2e0-d589742f6f51)
 
-
 add multiple screenshots here
 
 # Contributers
