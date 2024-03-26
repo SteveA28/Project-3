@@ -5,8 +5,7 @@ import "./index.css";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const CONNECTION_STRING =
-  "https://tripsetvacations-6.onrender.com/graphql" ||
-  "http://localhost:3000/graphql";
+  "https://tripsetvacations-6.onrender.com/graphql"
 
 const client = new ApolloClient({
   uri: CONNECTION_STRING,
