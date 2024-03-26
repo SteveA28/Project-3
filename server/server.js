@@ -6,9 +6,10 @@ import nodemailer from "nodemailer";
 import { graphqlHTTP } from "express-graphql";
 import { GraphQLSchema } from "graphql";
 import { MutationType, QueryType } from "./graphql/TypeDefs.js";
+import { env } from "process";
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Initialize the GraphQL schema
 const schema = new GraphQLSchema({
