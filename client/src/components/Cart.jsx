@@ -1,25 +1,25 @@
 import React from "react";
 import { useCart } from "../contexts/CartContext"; // Adjust the import path as necessary
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import addDays from "date-fns/addDays";
+// import "react-datepicker/dist/react-datepicker.css";
+// import addDays from "date-fns/addDays";
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateDateRange } = useCart();
 
-  const handleDateChange = (dates, index) => {
-    const [start, end] = dates;
+  // const handleDateChange = (dates, index) => {
+  //   const [start, end] = dates;
 
-    // Check if the range is exactly 4 days (3 nights)
-    if (start && end && Math.abs(end - start) === 3 * 24 * 60 * 60 * 1000) {
-      updateDateRange(index, start, addDays(end, 1)); // Adjusting end date as addDays is inclusive
-    } else if (start && !end) {
-      // Automatically set end date to 3 days after start if only start date is selected
-      updateDateRange(index, start, addDays(start, 3));
-    }
-    // If the selection does not meet criteria, you might reset or do nothing
-    // This example automatically sets the end date, ensuring the range is always 4 days
-  };
+  //   // Check if the range is exactly 4 days (3 nights)
+  //   if (start && end && Math.abs(end - start) === 3 * 24 * 60 * 60 * 1000) {
+  //     updateDateRange(index, start, addDays(end, 1)); // Adjusting end date as addDays is inclusive
+  //   } else if (start && !end) {
+  //     // Automatically set end date to 3 days after start if only start date is selected
+  //     updateDateRange(index, start, addDays(start, 3));
+  //   }
+  //   // If the selection does not meet criteria, you might reset or do nothing
+  //   // This example automatically sets the end date, ensuring the range is always 4 days
+  // };
 
   return (
     <div className="cart-container mt-[80px]  ">
@@ -50,7 +50,7 @@ const Cart = () => {
             <div className="cart-item-info">
               {/* Date picker container to adjust position */}
               <div className="date-picker-container">
-                <DatePicker
+                {/* <DatePicker
                   className="bg-blue-500"
                   selected={item.startDate}
                   onChange={(dates) => handleDateChange(dates, index)}
@@ -58,7 +58,7 @@ const Cart = () => {
                   endDate={item.endDate}
                   selectsRange
                   inline
-                />
+                /> */}
               </div>
             </div>
             <button
