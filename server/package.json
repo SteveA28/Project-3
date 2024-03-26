@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "node --watch server.js",
+    "build": "cd client && npm run built", 
+    "render-build": "npm install --force && npm run build",
     "seed": "node seeds/seedsData.js"
   },
   "type": "module",
