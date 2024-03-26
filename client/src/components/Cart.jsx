@@ -29,7 +29,7 @@ const Cart = () => {
             key={index}
             className="cart-item flex justify-between items-center mb-[20px]"
           >
-            <div className="cart-item-image-container flex items-center">
+            <div className="cart-item-image-container  w-[300px] flex items-center">
               <img
                 src={item.img}
                 alt=""
