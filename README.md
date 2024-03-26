@@ -10,14 +10,23 @@ Npm install
 
 # Screenshots
 
-add multiple screenshots here 
+![homepage](https://github.com/SteveA28/TripSetVacations/assets/145178643/28a2779e-4475-43eb-8d1d-ed6ace305dc6)
 
-# Contributers 
+![login](https://github.com/SteveA28/TripSetVacations/assets/145178643/35a60471-48b0-453a-b86a-f624d18a7756)
+
+![packagedetails](https://github.com/SteveA28/TripSetVacations/assets/145178643/1a81da7f-69ab-421a-8c0c-b639d0256063)
+
+![calendar](https://github.com/SteveA28/TripSetVacations/assets/145178643/45464eae-26d2-4c56-a2e0-d589742f6f51)
+
+
+add multiple screenshots here
+
+# Contributers
 
 https://github.com/Canes2023
 https://github.com/Rilwan0410
 https://github.com/GiancarloMorera
 
-## License 
+## License
 
 Please refer to the LICENSE in the repo.
