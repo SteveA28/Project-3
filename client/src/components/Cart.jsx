@@ -1,8 +1,8 @@
-import React from 'react';
-import { useCart } from '../contexts/CartContext'; // Adjust the import path as necessary
+import React from "react";
+import { useCart } from "../contexts/CartContext"; // Adjust the import path as necessary
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import addDays from 'date-fns/addDays';
+import addDays from "date-fns/addDays";
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateDateRange } = useCart();
@@ -22,14 +22,28 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-container">
+    <div className="cart-container mt-[80px]  ">
       {cartItems.length > 0 ? (
         cartItems.map((item, index) => (
-          <div key={index} className="cart-item flex justify-between items-center">
+          <div
+            key={index}
+            className="cart-item flex justify-between items-center mb-[20px]"
+          >
             <div className="cart-item-image-container flex items-center">
-              <img src={item.img} alt="" className="cart-item-image" style={{ width: '100px', height: '100px', objectFit: 'cover', marginRight: '15px' }} />
+              <img
+                src={item.img}
+                alt=""
+                className="cart-item-image"
+                style={{
+                  width: "100px",
+                  height: "100px",
+                  objectFit: "cover",
+                  marginRight: "15px",
+                }}
+              />
               <div>
-                <h5 className="font-bold">{item.packageType}</h5> {/* Make sure the title is visible */}
+                <h5 className="font-bold">{item.packageType}</h5>{" "}
+                {/* Make sure the title is visible */}
                 <p>${item.packagePrice}</p>
               </div>
             </div>
@@ -37,6 +51,7 @@ const Cart = () => {
               {/* Date picker container to adjust position */}
               <div className="date-picker-container">
                 <DatePicker
+                  className="bg-blue-500"
                   selected={item.startDate}
                   onChange={(dates) => handleDateChange(dates, index)}
                   startDate={item.startDate}
