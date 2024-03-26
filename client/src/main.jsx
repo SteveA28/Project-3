@@ -4,10 +4,12 @@ import App from "./App.jsx";
 import "./index.css";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
+const CONNECTION_STRING =
+  "https://tripsetvacations-6.onrender.com/graphql" ||
+  "http://localhost:3000/graphql";
+
 const client = new ApolloClient({
-  uri:
-    "http://localhost:3000/graphql" ||
-    "https://tripsetvacations-6.onrender.com/graphql",
+  uri: CONNECTION_STRING,
   cache: new InMemoryCache(),
 });
 
