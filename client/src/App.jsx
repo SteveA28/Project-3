@@ -16,12 +16,11 @@ function App() {
       <CartProvider> {/* Wrap your app with CartProvider */}
         <BrowserRouter>
           <Navbar /> {/* Navbar will now have access to AuthContext and CartContext */}
-          <Routes>
+          <Routes >
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} /> {/* Ensure you have a Cart route */}
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
-            {/* <Route path="/details" element={<PackageDetails />} /> Commented out because of the parameterized route below */}
             <Route path="/details/:id" element={<PackageDetails />} />
             <Route path="/contact-us" element={<ContactUs />} /> {/* Add the route for ContactUs */}
           </Routes>

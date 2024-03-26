@@ -15,7 +15,7 @@ await Package.deleteMany();
 const packages = await Package.insertMany([
   {
     name: "The Bahamas (4-days)",
-    image: "individual-basic.jpeg",
+    image: "individual-basic.png",
     categoryId: categories[2]._id,
     price: 800,
     packageDetails: [
@@ -25,7 +25,7 @@ const packages = await Package.insertMany([
   },
   {
     name: "Cancun (4-days)",
-    image: "individual-premium.jpeg",
+    image: "individual-premium.png",
     categoryId: categories[2]._id,
     price: 850,
     packageDetails: [
@@ -35,7 +35,7 @@ const packages = await Package.insertMany([
   },
   {
     name: "Jamaica (4-days)",
-    image: "individual-platinum.jpeg",
+    image: "individual-platinum.png",
     categoryId: categories[2]._id,
     price: 700,
     packageDetails: [
@@ -45,7 +45,7 @@ const packages = await Package.insertMany([
   },
   {
     name: "Belize (4-days)",
-    image: "group-basic.jpeg",
+    image: "group-basic.png",
     categoryId: categories[1]._id,
     price: 750,
     packageDetails: [
@@ -55,7 +55,7 @@ const packages = await Package.insertMany([
   },
   {
     name: "Puerto Rico (4-days)",
-    image: "group-premium.jpeg",
+    image: "group-premium.png",
     categoryId: categories[1]._id,
     price: 800,
     packageDetails: [
@@ -65,7 +65,7 @@ const packages = await Package.insertMany([
   },
   {
     name: "Maui (4-days)",
-    image: "group-platinum.jpeg",
+    image: "group-platinum.png",
     categoryId: categories[1]._id,
     price: 900,
     packageDetails: [
@@ -75,7 +75,7 @@ const packages = await Package.insertMany([
   },
   {
     name: "Turks And Caicos (4-days)",
-    image: "family-basic.jpg",
+    image: "family-basic.png",
     categoryId: categories[0]._id,
     price: 1200,
     packageDetails: [
@@ -85,7 +85,7 @@ const packages = await Package.insertMany([
   },
   {
     name: "Zanzibar (4-days)",
-    image: "family-premium.jpeg",
+    image: "family-premium.png",
     categoryId: categories[0]._id,
     price: 950,
     packageDetails: [
@@ -95,7 +95,7 @@ const packages = await Package.insertMany([
   },
   {
     name: "Galápagos Islands (4-days)",
-    image: "family-platinum.jpeg",
+    image: "family-platinum.png",
     categoryId: categories[0]._id,
     price: 1100,
     packageDetails: [
@@ -106,4 +106,3 @@ const packages = await Package.insertMany([
 ]);
 
 console.log("package data successful");
-
