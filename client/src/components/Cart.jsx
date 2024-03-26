@@ -44,7 +44,7 @@ const Cart = () => {
               <div>
                 <h5 className="font-bold">{item.packageType}</h5>{" "}
                 {/* Make sure the title is visible */}
-                <p>${item.packagePrice}</p>
+                <p>{item.packagePrice}</p>
               </div>
             </div>
             <div className="cart-item-info">
