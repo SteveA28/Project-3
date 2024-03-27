@@ -1,35 +1,24 @@
 import React from "react";
 import { useCart } from "../contexts/CartContext"; // Adjust the import path as necessary
-// import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
-// import addDays from "date-fns/addDays";
+import DatePicker from './DatePicker'; // Adjust this path to where your DatePicker component is located
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateDateRange } = useCart();
 
-  // const handleDateChange = (dates, index) => {
-  //   const [start, end] = dates;
-
-  //   // Check if the range is exactly 4 days (3 nights)
-  //   if (start && end && Math.abs(end - start) === 3 * 24 * 60 * 60 * 1000) {
-  //     updateDateRange(index, start, addDays(end, 1)); // Adjusting end date as addDays is inclusive
-  //   } else if (start && !end) {
-  //     // Automatically set end date to 3 days after start if only start date is selected
-  //     updateDateRange(index, start, addDays(start, 3));
-  //   }
-  //   // If the selection does not meet criteria, you might reset or do nothing
-  //   // This example automatically sets the end date, ensuring the range is always 4 days
-  // };
+  const handleDateChange = (newDate, index) => {
+    // Assuming updateDateRange can handle updating based on the item index and the new date
+    updateDateRange(newDate, index);
+  };
 
   return (
-    <div className="cart-container mt-[80px]  ">
+    <div className="cart-container mt-[80px]">
       {cartItems.length > 0 ? (
         cartItems.map((item, index) => (
           <div
             key={index}
             className="cart-item flex justify-between items-center mb-[20px]"
           >
-            <div className="cart-item-image-container  w-[300px] flex items-center">
+            <div className="cart-item-image-container w-[300px] flex items-center">
               <img
                 src={item.img}
                 alt=""
@@ -42,23 +31,13 @@ const Cart = () => {
                 }}
               />
               <div>
-                <h5 className="font-bold">{item.packageType}</h5>{" "}
-                {/* Make sure the title is visible */}
+                <h5 className="font-bold">{item.packageType}</h5>
                 <p>{item.packagePrice}</p>
               </div>
             </div>
             <div className="cart-item-info">
-              {/* Date picker container to adjust position */}
               <div className="date-picker-container">
-                {/* <DatePicker
-                  className="bg-blue-500"
-                  selected={item.startDate}
-                  onChange={(dates) => handleDateChange(dates, index)}
-                  startDate={item.startDate}
-                  endDate={item.endDate}
-                  selectsRange
-                  inline
-                /> */}
+                <DatePicker onDateChange={(newDate) => handleDateChange(newDate, index)} />
               </div>
             </div>
             <button
