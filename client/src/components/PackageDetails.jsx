@@ -76,7 +76,7 @@ export default function PackageDetails() {
             </h2>
             <img
               src={getImage(getData.getPackage.image)}
-              className="h-[400px] w-[700px] mt-[30px] shadow-md shadow-[rgba(0,0,0,0.4)] object-cover ml-[30px]"
+              className="h-[400px] w-[700px] mt-[30px]  2xl:h-[450px] 2xl:w-[800px] shadow-md shadow-[rgba(0,0,0,0.4)] object-cover ml-[30px]"
               alt=""
             />
           </div>
